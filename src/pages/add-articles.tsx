@@ -3,9 +3,9 @@ import ArticleForm from "../components/articleForm";
 
 const AddArticles = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-[100vh]">
       <Link to="/">
-        <p className="text-[#F20000] cursor-pointer"> Go Back</p>
+        <p className="text-[#F20000] cursor-pointer text-sm">&larr; Go Back</p>
       </Link>
       <ArticleForm />
     </div>

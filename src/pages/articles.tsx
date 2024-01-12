@@ -4,9 +4,9 @@ import SearchForm from "../components/search-form";
 import useAppContext from "../context";
 
 const Articles = () => {
-  const { filteredArticles } = useAppContext();
+  const { filteredArticles, loading } = useAppContext();
   return (
-    <div className="">
+    <div className="h-[100vh] w-full relative overflow-y-scroll no-scrollbar">
       <SearchForm />
       <div className="flex w-full justify-between mt-8">
         <h6 className="text-left text-[#2E3031] font-semibold text-xl">
@@ -16,10 +16,22 @@ const Articles = () => {
           <p className="text-[#F20000] cursor-pointer">+ Add Article</p>
         </Link>
       </div>
-      <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-5 mt-3">
-        {filteredArticles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
+      <div className="w-full mt-3">
+        {loading ? (
+          <div className="w-full h-[20vh] flex justify-center items-center">
+            <p className="text-[#2E3031]">Loading Articles</p>
+          </div>
+        ) : filteredArticles.length === 0 ? (
+          <div className="w-full h-[20vh] flex justify-center items-center">
+            <p className="text-[#2E3031]">No articles found</p>
+          </div>
+        ) : (
+          <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-5">
+            {filteredArticles.map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -23,10 +23,11 @@ const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
     }
   };
 
+  // UseEffect to get the articles when the component is mounted
   useEffect(() => {
     getArticles();
   }, []);
-  console.log(articles);
+
   return (
     <AppContext.Provider
       value={{
