@@ -4,6 +4,8 @@ import { ArticleType } from "../utils/types";
 type AppContextType = {
   articles: ArticleType[];
   setArticles: (articles: ArticleType[]) => void;
+  filteredArticles: ArticleType[];
+  setFilteredArticles: (articles: ArticleType[]) => void;
   loading: boolean;
 };
 

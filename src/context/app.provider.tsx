@@ -4,6 +4,7 @@ import { ArticleType } from "../utils/types";
 
 const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [articles, setArticles] = useState<ArticleType[]>([]);
+  const [filteredArticles, setFilteredArticles] = useState<ArticleType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
   const getArticles = async () => {
@@ -14,9 +15,10 @@ const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
       );
       const data = await response.json();
       setArticles(data);
-      setLoading(false);
+      setFilteredArticles(data);
     } catch (error) {
       console.error(error);
+    } finally {
       setLoading(false);
     }
   };
@@ -26,7 +28,15 @@ const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
   }, []);
   console.log(articles);
   return (
-    <AppContext.Provider value={{ articles, setArticles, loading }}>
+    <AppContext.Provider
+      value={{
+        articles,
+        setArticles,
+        filteredArticles,
+        setFilteredArticles,
+        loading,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
