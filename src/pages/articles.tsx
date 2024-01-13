@@ -13,7 +13,7 @@ const Articles = () => {
           Articles
         </h6>
         <Link to="/add">
-          <p className="text-[#F20000] cursor-pointer">+ Add Article</p>
+          <p className="text-[#F20000] cursor-pointer">+ Create Article</p>
         </Link>
       </div>
       <div className="w-full mt-3">
@@ -28,7 +28,10 @@ const Articles = () => {
         ) : (
           <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-5">
             {filteredArticles.map((article) => (
-              <ArticleCard key={article.id} article={article} />
+              <ArticleCard
+                key={`${article.id} + ${article.name}`}
+                article={article}
+              />
             ))}
           </div>
         )}

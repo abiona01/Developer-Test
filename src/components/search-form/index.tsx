@@ -4,6 +4,7 @@ import useAppContext from "../../context";
 const SearchForm = () => {
   const { articles, setFilteredArticles } = useAppContext();
   const [searchValue, setSearchValue] = useState<string>("");
+  const [disabled, setDisabled] = useState<boolean>(false);
   // function to filter the articles by name
   const handleSearch = () => {
     const filteredArticles = articles.filter((article) => {
@@ -17,10 +18,18 @@ const SearchForm = () => {
       setFilteredArticles(articles);
     }
   }, [articles, searchValue, setFilteredArticles]);
+
+  useEffect(() => {
+    if (searchValue === "") {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  }, [searchValue, disabled]);
   return (
     <div className="w-full flex flex-col sm:flex-row gap-4 items-center bg-[#f7f7f8] pb-4 sticky top-0">
       <input
-        className="w-full sm:w-[90%] border border-[#EAEBEB] text-[#2E3031] rounded-md h-[40px] px-3 bg-transparent outline-none"
+        className="w-full sm:w-[90%] input"
         type="text"
         placeholder="Search by name"
         onChange={(e) => {
@@ -28,10 +37,11 @@ const SearchForm = () => {
         }}
       />
       <button
-        className="bg-[#F20000] hover:bg-[#E60A2B] text-white font-medium py-2 px-8 rounded-[100px] cursor-pointer outline-none"
+        className={`button outline-none ${disabled ? "button-disabled" : ""}`}
         onClick={() => {
           handleSearch();
         }}
+        disabled={disabled}
       >
         Search
       </button>

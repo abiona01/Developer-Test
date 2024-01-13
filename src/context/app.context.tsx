@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { ArticleType } from "../utils/types";
+import { ArticleFormType, ArticleType } from "../utils/types";
 
 type AppContextType = {
   articles: ArticleType[];
@@ -7,6 +7,7 @@ type AppContextType = {
   filteredArticles: ArticleType[];
   setFilteredArticles: (articles: ArticleType[]) => void;
   loading: boolean;
+  createArticle: (article: ArticleFormType) => void;
 };
 
 export const AppContext = createContext({} as AppContextType);

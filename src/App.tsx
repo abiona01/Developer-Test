@@ -2,7 +2,7 @@ import "./App.css";
 import { AppProvider } from "./context";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Articles from "./pages/articles";
-import AddArticles from "./pages/add-articles";
+import CreateArticles from "./pages/create-articles";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Articles />} />
-          <Route path="/add" element={<AddArticles />} />
+          <Route path="/add" element={<CreateArticles />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

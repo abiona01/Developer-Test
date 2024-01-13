@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ArticleForm from "../components/articleForm";
 
-const AddArticles = () => {
+const CreateArticles = () => {
   return (
     <div className="w-full h-[100vh]">
       <Link to="/">
@@ -12,4 +12,4 @@ const AddArticles = () => {
   );
 };
 
-export default AddArticles;
+export default CreateArticles;
