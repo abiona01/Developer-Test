@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import Articles from "../pages/articles";
 import { JSX } from "react/jsx-runtime";
 
-// Wrap the component with BrowserRouter in the test
 const renderWithRouter = (
   component:
     | string
@@ -34,6 +33,4 @@ it("should render the 'Create Article' button", () => {
 it("should display loading message while fetching articles", async () => {
   renderWithRouter(<Articles />);
   expect(screen.getByText("Loading Articles")).toBeInTheDocument();
-  // You might want to add additional assertions related to loading state
-  // Mock the API response to simulate loading success or failure and assert on the expected behavior
 });
