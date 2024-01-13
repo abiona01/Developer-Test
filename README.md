@@ -1,7 +1,5 @@
 # Rapid River Frontend Developer Test
 
-This is a React app bootstrapped with Vite.
-
 ## Table of Contents
 
 - [Getting Started](#getting-started)
