@@ -5,7 +5,6 @@ This is a React app bootstrapped with Vite.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
 - [Running Tests](#running-tests)
 - [Issues faced while building](#issues-faced-while-building)
@@ -45,70 +44,6 @@ Before you begin, ensure you have the following installed on your machine:
    ```
 
 5. Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
-
-## Folder Structure
-
-The project structure is as follows:
-
-Developer-Test/
-│
-├── public/
-│ └── vite.svg
-│
-├── src/
-│ ├── assets/
-│ │ └── react.svg
-│ ├── components/
-│ │ ├── articleCard/
-│ │ │ └── index.tsx
-│ │ ├── articleForm/
-│ │ │ ├── index.tsx
-│ │ │ ├── validation.ts
-│ │ ├── searchForm/
-│ │ │ └── index.tsx
-│ ├── context/
-│ │ ├── app.context.tsx
-│ │ ├── app.provider.tsx
-│ │ ├── index.tsx
-│ ├── pages/
-│ │ ├── articles
-│ │ ├── create-articles.tsx
-│ ├── tests/
-│ │ ├── snapshots/
-│ │ │ ├── searchForm.test.tsx.snap
-│ │ ├── app.context.test.tsx
-│ │ ├── app.provider.test.tsx
-│ │ ├── articleCard.test.tsx
-│ │ ├── articleForm.test.tsx
-│ │ ├── articles.test.tsx
-│ │ ├── create-articles.test.tsx
-│ │ ├── searchForm.test.tsx
-│ │ ├── setup.ts
-│ ├── utils/
-│ │ ├── functions.ts
-│ │ ├── test-utils.tsx
-│ │ ├── types.ts
-│ ├── App.css
-│ ├── App.tsx
-│ ├── index.css
-│ ├── main.tsx
-│ ├── vite-env.d.ts
-├── .gitignore
-├── .prettierrc
-├── .eslintrc.json
-├── .eslintignore
-├── .editorconfig
-├── .eslintrc.cjs
-├── .prettierignore
-├── index.html
-├── package.json
-├── README.md
-├── tsconfig.json
-├── vite.config.ts
-├── vercel.json
-├── tsconfig.node.json
-├── postcss.config.js
-├── tailwind.config.js
 
 ## Available Scripts
 
