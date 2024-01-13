@@ -6,14 +6,14 @@ import CreateArticles from "./pages/create-articles";
 
 function App() {
   return (
-    <AppProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AppProvider>
         <Routes>
           <Route path="/" element={<Articles />} />
           <Route path="/add" element={<CreateArticles />} />
         </Routes>
-      </BrowserRouter>
-    </AppProvider>
+      </AppProvider>
+    </BrowserRouter>
   );
 }
 

@@ -20,12 +20,8 @@ const SearchForm = () => {
   }, [articles, searchValue, setFilteredArticles]);
 
   useEffect(() => {
-    if (searchValue === "") {
-      setDisabled(true);
-    } else {
-      setDisabled(false);
-    }
-  }, [searchValue, disabled]);
+    setDisabled(searchValue === "");
+  }, [searchValue]);
   return (
     <div className="w-full flex flex-col sm:flex-row gap-4 items-center bg-[#f7f7f8] pb-4 sticky top-0">
       <input
@@ -37,7 +33,9 @@ const SearchForm = () => {
         }}
       />
       <button
-        className={`button outline-none ${disabled ? "button-disabled" : ""}`}
+        className={`button outline-none ${
+          disabled ? "button-disabled" : "button-enabled"
+        }`}
         onClick={() => {
           handleSearch();
         }}

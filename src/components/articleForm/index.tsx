@@ -91,6 +91,7 @@ const ArticleForm = () => {
       </div>
       <button
         type="submit"
+        role="button"
         className={`mt-4 button ${disabled ? "button-disbaled" : ""}`}
         disabled={disabled}
       >
