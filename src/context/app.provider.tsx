@@ -16,8 +16,8 @@ const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
       const data = await response.json();
       setArticles(data);
       setFilteredArticles(data);
-    } catch (error) {
-      console.error(error);
+    } catch {
+      alert("Error fetching articles");
     } finally {
       setLoading(false);
     }

@@ -51,36 +51,31 @@ Before you begin, ensure you have the following installed on your machine:
 The project structure is as follows:
 
 Developer-Test/
+│
 ├── public/
-│ ├── vite.svg
-
+│ └── vite.svg
+│
 ├── src/
 │ ├── assets/
-│ │ ├── react.svg
-
+│ │ └── react.svg
 │ ├── components/
 │ │ ├── articleCard/
-│ │ │ ├── index.tsx
-
+│ │ │ └── index.tsx
 │ │ ├── articleForm/
 │ │ │ ├── index.tsx
-| | | ├── validation.ts
-
+│ │ │ ├── validation.ts
 │ │ ├── searchForm/
-│ │ │ ├── index.tsx
-
+│ │ │ └── index.tsx
 │ ├── context/
 │ │ ├── app.context.tsx
-| | ├── app.provider.tsx
-| | ├── index.tsx
-
+│ │ ├── app.provider.tsx
+│ │ ├── index.tsx
 │ ├── pages/
 │ │ ├── articles
 │ │ ├── create-articles.tsx
-
 │ ├── tests/
-│ │ ├── **snapshots**/
-│ │ | ├── searchForm.test.tsx.snap
+│ │ ├── snapshots/
+│ │ │ ├── searchForm.test.tsx.snap
 │ │ ├── app.context.test.tsx
 │ │ ├── app.provider.test.tsx
 │ │ ├── articleCard.test.tsx
@@ -89,18 +84,15 @@ Developer-Test/
 │ │ ├── create-articles.test.tsx
 │ │ ├── searchForm.test.tsx
 │ │ ├── setup.ts
-
 │ ├── utils/
 │ │ ├── functions.ts
 │ │ ├── test-utils.tsx
 │ │ ├── types.ts
-
 │ ├── App.css
 │ ├── App.tsx
 │ ├── index.css
 │ ├── main.tsx
 │ ├── vite-env.d.ts
-
 ├── .gitignore
 ├── .prettierrc
 ├── .eslintrc.json
