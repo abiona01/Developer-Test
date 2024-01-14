@@ -10,7 +10,7 @@ function App() {
       <AppProvider>
         <Routes>
           <Route path="/" element={<Articles />} />
-          <Route path="/add" element={<CreateArticles />} />
+          <Route path="/create" element={<CreateArticles />} />
         </Routes>
       </AppProvider>
     </BrowserRouter>

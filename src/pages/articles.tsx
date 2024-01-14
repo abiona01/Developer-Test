@@ -14,7 +14,7 @@ const Articles = () => {
           <h6 className="text-left text-[#2E3031] font-semibold text-xl">
             Articles
           </h6>
-          <Link to="/add">
+          <Link to="/create">
             <p className="text-[#F20000] cursor-pointer">+ Create Article</p>
           </Link>
         </div>
