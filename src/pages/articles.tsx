@@ -30,10 +30,7 @@ const Articles = () => {
           ) : (
             <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-5">
               {filteredArticles.map((article) => (
-                <ArticleCard
-                  key={`${article.id} + ${article.name}`}
-                  article={article}
-                />
+                <ArticleCard key={article.id} article={article} />
               ))}
             </div>
           )}

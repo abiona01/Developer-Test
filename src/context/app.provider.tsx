@@ -36,19 +36,16 @@ const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
     };
     try {
       setLoading(true);
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/comments",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
+      await fetch("https://jsonplaceholder.typicode.com/comments", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
         },
-      );
-      const newArticle = await response.json();
-      setArticles([newArticle, ...articles]);
-      setFilteredArticles([newArticle, ...articles]);
+      });
+
+      setArticles([data, ...articles]);
+      setFilteredArticles([data, ...articles]);
     } catch {
       alert("Error creating article");
     } finally {
